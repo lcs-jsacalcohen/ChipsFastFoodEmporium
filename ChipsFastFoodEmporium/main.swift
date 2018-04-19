@@ -9,7 +9,34 @@
 import Foundation
 
 // INPUT
+
 // Collect and filter user input here
+var burgerChoiceMade = 0
+while 1 == 1 {
+    
+    // Prompt the user
+    print("Please enter a burger choice:")
+    
+    // Test #1: Get input and make sure it is not nil
+    guard let inputGiven = readLine() else {
+        // if nil, ask again
+        continue
+    }
+    
+    // Test #2: Can it be an integer?
+    guard let integerGiven = Int(inputGiven) else {
+        // if it can't be an integer, prompt again
+        continue
+    }
+    
+    // Test #3: Is it within the range 1 to 4?
+    
+    
+    // If we got here, it is good input
+    burgerChoiceMade = integerGiven
+    break
+    
+}
 
 //Array For burger Choices
 var burgerChoices = Array(repeating: 0, count: 5)
@@ -43,11 +70,11 @@ dessertChoices[2] = 266 // Sundea
 dessertChoices[3] = 75 // Fruit Cup
 dessertChoices[4] = 0 // no dessert
 
-
-let burgerChoiceMade = 2
-let drinkChoiceMade = 4
-let sideOrderChoiceMade = 3
-let dessertChoiceMade = 1
+// Faking input until we write the code to actually take the input from the user
+//let burgerChoiceMade = 3
+let drinkChoiceMade = 3
+let sideOrderChoiceMade = 1
+let dessertChoiceMade = 2
 
 
 // PROCESS
